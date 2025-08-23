@@ -28,3 +28,4 @@ plugins:
 domain: snowAvocado.github.io      
 url: https://snowAvocado.github.io  
 baseurl: snowAvocado.github.io 
+repository: snowAvocado/snowAvocado.github.io
