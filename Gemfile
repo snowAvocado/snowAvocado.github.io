@@ -10,3 +10,5 @@ group :jekyll_plugins do
   gem "github-pages"
 end
 # gem "rails"
+
+gem "webrick", "~> 1.9"
