@@ -4,11 +4,66 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+      <script>
+    // Apply theme before page renders
+    (function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+  </script>
+    <style>
+      .body {
+      margin: 0;
+      font-family: 'Monospace';
+      background-color: black;
+      color: white;
+      /*transition: background-color 0.3s, color 0.3s;*/
+      line-height: 1.6;
+      }
+      /* Light mode styles */
+      .body.light-mode {
+        background-color: white;
+        color: black;
+      }
+    </style>
     {% feed_meta %}
     {% seo %}
   </head>
-  <body>
+  <body class="body">
     {% include navigation.html %}
+
+    <script>
+     function toggleDarkMode() {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+
+    // update button text
+    const btn = document.querySelector('.toggle-btn');
+    btn.textContent = isLight ? '🌙' : '☀️';
+
+    // save mode
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  }
+
+  // Set button on load
+window.onload = function() {
+    const theme = localStorage.getItem('theme');
+    const btn = document.querySelector('.toggle-btn');
+
+    if (theme === 'light') {
+      document.body.classList.add('light-mode');
+      btn.textContent = '🌙';
+    } else {
+      document.body.classList.remove('light-mode');
+      btn.textContent = '☀️';
+    }
+  }
+
+    </script>
+  
     {{ content }}
+
   </body>
 </html>

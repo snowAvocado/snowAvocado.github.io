@@ -1,0 +1,29 @@
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.contact-list li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.contact-list a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: #0077b5; /* LinkedIn blue highlight */
+}
+
+.contact-list .icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}

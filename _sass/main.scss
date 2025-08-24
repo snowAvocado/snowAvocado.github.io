@@ -1,4 +1,97 @@
 
+
 .current {
-  color: green;
+  color: red;
+}
+
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  font-family: 'Monospace'; 
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #00bcd4;
+}
+
+/* Dark mode toggle button */
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Section styling */
+.main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.h1, .h2,.h3 {
+  font-family: 'Monospace';
+}
+
+
+/*  p {
+  font-family: 'Gloria Hallelujah', cursive;
+}*/
+.p {
+  font-family: 'Monospace';
+  } 
+
+/* Latest posts as linear list */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post {
+  padding: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  border-color: #00bcd4;
+}
+
+/* Light mode styles */
+.body.light-mode {
+  background-color: white;
+  color: black;
 }
