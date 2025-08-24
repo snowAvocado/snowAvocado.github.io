@@ -1,15 +1,14 @@
 ---
-layout: default
+layout: post
 author: snow
+heading: Reading DDIA book
 ---
 
-Designing Data-Intensive Applications by Martin Kleppmann is widely regarded as an essential resource for software engineers, architects, and data professionals. The book delves into the complexities of building reliable, scalable, and maintainable systems, focusing on the intricacies of data management and distributed systems.
+Designing Data-Intensive Applications by Martin Kleppmann is widely regarded as an essential resource for software engineers, architects, and data professionals.
+
+The book delves into the complexities of building reliable, scalable, and maintainable systems, focusing on the intricacies of data management and distributed systems.
 David Reis's blog
-+10
-GitHub
-+10
-Amazon
-+10
+
 
 📘 Overview
 

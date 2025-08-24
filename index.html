@@ -2,21 +2,25 @@
 layout: default
 title : intro
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <main  class="main">
     <!-- About Section -->
     <section class="section">
-      <h1 class="h1">About Software Engineer</h1>
-       <p class="p">A software engineer is a problem solver who designs, develops, and maintains software systems.
-        They work with programming languages, frameworks, and tools to create applications and platforms.
-        Beyond coding, they analyze requirements and architect solutions that meet user needs.
-      Software engineers often collaborate with designers, testers, and product managers
-      Their role requires balancing technical expertise with creativity and communication skills
-      They may also engage in system design and database management
-      Software engineers optimize code for performance and efficiency
-      Documentation ensures that systems can be understood and maintained
-      They frequently work with APIs to integrate different software systems
-      Communication with clients and stakeholders is crucial for aligning expectations</p>
+      <h1 class="h1">About me </h1>
+       <p class="p"> Hi, I’m Snow, a software developer based in Stockholm, Sweden. Originally from India,
+         I moved here to pursue my master’s education and now work in the telecom industry, building radio software.
+         I use this site to share my learnings and experiences. Please feel free to explore my writings and reach out if you’d like to connect.
+
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/nikhil-reddy-mara" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:snowavacado@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/snowAvocado" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+
+        Thank you for visiting!</p>
 
     </section>
     <!-- Latest Posts Section -->
@@ -24,12 +28,15 @@ title : intro
       <h2 class="h2">Latest Posts</h2>
       <div class="posts">
         {% for post in site.posts %}
-        <div class="post"> 
-        <h3 class="h3" ><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="post" onclick="window.location.href='{{post.url}}'"> 
+        <h3 class="h3" ><a>{{ post.title }}</a></h2>
         <p class="p">  {{ post.excerpt }} </p>
           </div>
       {% endfor %}
     </div>
 
     </section>
+   <footer>
+    <p>© 2025 snow Avocado</p>
+  </footer>
   </main> 

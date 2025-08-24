@@ -2,17 +2,19 @@
 layout: default
 title: Blog
 ---
+  <main  class="main">
     </section>
     <!-- Latest Posts Section -->
     <section class="section">
       <h2 class="h2">All Posts</h2>
       <div class="posts">
         {% for post in site.posts %}
-        <div class="post"> 
-        <h3 class="h3" ><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="post" onclick="window.location.href='{{post.url}}'"> 
+        <h3 class="h3" ><a>{{ post.title }}</a></h2>
         <p class="p">  {{ post.excerpt }} </p>
           </div>
       {% endfor %}
     </div>
 
     </section>
+    </main>

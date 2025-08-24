@@ -1,0 +1,19 @@
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;            /* matches dark mode */
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+body.light-mode .social-links a {
+  color: black;            /* matches light mode */
+}
+
+.social-links a:hover {
+  color: #1da1f2;          /* e.g., Twitter blue on hover */
+}

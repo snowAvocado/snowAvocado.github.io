@@ -1,0 +1,13 @@
+footer {
+  width: 100%;            /* span full page */
+  text-align: center;     /* center all text inside */
+  padding: 20px;
+  margin-top: 50px;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
+}
+
+body.light-mode footer {
+  color: black;
+}
