@@ -2,7 +2,7 @@
   <nav class="nav">
     <ul class="ul" >
       {% for item in site.data.navigation %}
-      <li><a href="{{ item.link }}"> {% if page.url != item.link %} {{ item.name }} {% endif %} </a></li>
+      <li><a href="{{ item.link }}"> {% if page.url != item.link %} <h1 class="h1">{{ item.name }}</h1> {% endif %} </a></li>
      {% endfor %}
        <li><button class="toggle-btn" onclick="toggleDarkMode()"> <i class="fa-solid fa-moon"></i></button></li>
     </ul>
