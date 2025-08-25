@@ -2,7 +2,6 @@
 layout: default
 title : intro
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <main  class="main">
     <!-- About Section -->
@@ -27,7 +26,7 @@ title : intro
     <section class="section">
       <h2 class="h2">Latest Posts</h2>
       <div class="posts">
-        {% for post in site.posts %}
+        {% for post in site.posts limit:3 %}
         <div class="post" onclick="window.location.href='{{post.url}}'"> 
         <h3 class="h3" ><a>{{ post.title }}</a></h2>
         <p class="p">  {{ post.excerpt }} </p>

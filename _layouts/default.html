@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
       <script>
     // Apply theme before page renders
@@ -35,33 +36,42 @@
     {% include navigation.html %}
 
     <script>
-     function toggleDarkMode() {
-    document.body.classList.toggle('light-mode');
-    const isLight = document.body.classList.contains('light-mode');
+      function toggleDarkMode() {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
 
-    // update button text
-    const btn = document.querySelector('.toggle-btn');
-    btn.textContent = isLight ? '🌙' : '☀️';
+        // update button icon
+        const btn = document.querySelector('.toggle-btn i');
+        if (isLight) {
+          btn.classList.remove('fa-sun');
+          btn.classList.add('fa-moon');
+        } else {
+          btn.classList.remove('fa-moon');
+          btn.classList.add('fa-sun');
+        }
 
-    // save mode
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  }
+        // save mode
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      }
 
-  // Set button on load
-window.onload = function() {
-    const theme = localStorage.getItem('theme');
-    const btn = document.querySelector('.toggle-btn');
+      // Set button on load
+      window.onload = function() {
+        const theme = localStorage.getItem('theme');
+        const btn = document.querySelector('.toggle-btn i');
 
-    if (theme === 'light') {
-      document.body.classList.add('light-mode');
-      btn.textContent = '🌙';
-    } else {
-      document.body.classList.remove('light-mode');
-      btn.textContent = '☀️';
-    }
-  }
-
+        if (theme === 'light') {
+          document.body.classList.add('light-mode');
+          btn.classList.remove('fa-sun');
+          btn.classList.add('fa-moon');
+        } else {
+          document.body.classList.remove('light-mode');
+          btn.classList.remove('fa-moon');
+          btn.classList.add('fa-sun');
+        }
+      }
     </script>
+
+
   
     {{ content }}
   
