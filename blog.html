@@ -2,19 +2,29 @@
 layout: default
 title: Blog
 ---
-  <main  class="main">
+ 
+
+
+      <main  class="main">
     </section>
     <!-- Latest Posts Section -->
-    <section class="section">
-      <h2 class="h2">All Posts</h2>
-      <div class="posts">
-        {% for post in site.posts %}
-        <div class="post" onclick="window.location.href='{{post.url}}'"> 
-        <h3 class="h3" ><a>{{ post.title }}</a></h2>
-        <p class="p">  {{ post.excerpt }} </p>
-          </div>
-      {% endfor %}
-    </div>
+                <h2 class="h2">All Posts</h2>
+        {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+        {% for year in posts_by_year %}
+          <h2 class="h2">{{ year.name }}</h2>
+          {% assign posts_by_month = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+          {% for month in posts_by_month %}
+            <h3 class="h2">{{ month.name }}</h3>
+            <div class="posts">
+              {% for post in month.items %}
+              <div class="post" onclick="window.location.href='{{post.url}}'"> 
+                <h3 class="h3" ><a>{{ post.title }}</a></h2>
+                <p class="p">  {{ post.excerpt }} </p>
+                  </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        {% endfor %}
 
     </section>
     </main>
